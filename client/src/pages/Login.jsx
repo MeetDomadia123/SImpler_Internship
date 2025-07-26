@@ -5,7 +5,6 @@ import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
 const Login = () => {
-  // 1. Simplified state: only email and password are needed.
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -22,12 +21,12 @@ const Login = () => {
     }
   }, [isAuthenticated, navigate]);
 
-  // 2. Simplified validation for just login fields.
+  //  Simplified validation for just login fields.
   const validateField = (name, value) => {
     switch (name) {
       case "email":
         if (!value) return "Email is required";
-        // Optional: you might remove the gmail check for login
+        // Regex to validate Gmail addresses
         const emailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
         if (!emailRegex.test(value)) return "Please enter a valid Gmail address";
         break;
@@ -65,7 +64,6 @@ const Login = () => {
     setErrors(validationErrors);
 
     if (Object.keys(validationErrors).length === 0) {
-      // NOTE: In a real app, you would verify credentials against a database here.
       // For this example, we'll just log the user in if the fields are valid.
       toast.success("Logged In Successfully!");
       login(); // Call login from context
@@ -89,7 +87,7 @@ const Login = () => {
       />
       <div className="bg-gray-600 min-h-screen flex items-center justify-center p-4 font-sans">
         <div className="bg-white p-8 rounded-xl shadow-lg w-full max-w-sm">
-          {/* 3. Updated UI text */}
+          {         /* 3. Updated title and description */}
           <h2 className="text-2xl font-bold text-center mb-7 text-[#1D2B4F]">
             Login to Your Account
           </h2>
