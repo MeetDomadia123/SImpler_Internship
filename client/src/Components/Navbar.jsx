@@ -10,24 +10,23 @@ const Navbar = () => {
   const handleLogout = () => {
     logout();
     setIsOpen(false);
-    navigate("/login"); // A better UX is to go to the login page after logout
+    navigate("/login");
   };
 
   // --- STYLE HELPERS ---
 
-  // Standard style for main navigation links (Home, About, etc.)
+ 
   const linkClass = ({ isActive }) =>
     `py-2 px-3 block rounded-md text-sm font-medium transition duration-200 ${
       isActive ? "bg-gray-100 text-blue-600" : "text-gray-600 hover:bg-gray-100"
     }`;
 
-  // 1. NEW: Dynamic style for the auth buttons (Login/Sign Up)
-  // This gives the active link a solid background and the inactive link an outline style.
+
   const authButtonClass = ({ isActive }) =>
     `font-bold py-2 px-4 rounded-md transition duration-300 text-sm ${
       isActive
-        ? "bg-blue-600 text-white cursor-default" // Primary, filled style for the active page
-        : "text-blue-600 border border-blue-600 hover:bg-blue-50" // Secondary, outline style
+        ? "bg-blue-600 text-white cursor-default" 
+        : "text-blue-600 border border-blue-600 hover:bg-blue-50" 
     }`;
 
   return (
@@ -60,7 +59,7 @@ const Navbar = () => {
                   </button>
                 </>
               ) : (
-                // 2. UPDATED: Render BOTH Login and Sign Up buttons when logged out
+
                 <>
                   <NavLink to="/login" className={authButtonClass}>
                     Log In
@@ -73,7 +72,7 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Mobile Menu Button (No changes here) */}
+          {/* Mobile Menu Button */}
           <div className="-mr-2 flex md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
