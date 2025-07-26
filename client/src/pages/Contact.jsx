@@ -158,7 +158,7 @@ const Contact = () => {
               <InfoCard
                 icon={<FaMapMarkerAlt />}
                 title="Our Office"
-                text="123 Innovation Drive, Tech City, USA"
+                text="123 Innovation Drive, Tech City,Mumbai, India"
               />
               <InfoCard
                 icon={<FaEnvelope />}

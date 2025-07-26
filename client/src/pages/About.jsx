@@ -25,10 +25,10 @@ const About = () => {
               {/* Remember to replace this with your actual name */}
               Hi, I’m{" "}
               <span className="font-bold text-blue-700 dark:text-blue-400">
-                [Your Name]
+                Meet Domadia
               </span>
               , a developer passionate about building user-friendly web
-              applications. This internship task gave me a chance to demonstrate
+              applications. This task gave me a chance to demonstrate
               my skills in modern frontend technologies while focusing on
               usability and responsiveness.
             </p>
