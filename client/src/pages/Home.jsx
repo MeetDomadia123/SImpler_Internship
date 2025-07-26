@@ -2,9 +2,9 @@ import React from 'react';
 import UserCard from '../Components/UserCard.jsx';
 
 const users = [
-  { name: 'Alice Johnson', email: 'alice.j@example.com' },
-  { name: 'Bob Williams', email: 'bob.w@example.com' },
-  { name: 'Charlie Brown', email: 'charlie.b@example.com' },
+  { name: 'Meet', email: 'meet.j@example.com' },
+  { name: 'Bob will', email: 'bob.w@example.com' },
+  { name: 'Charlie black', email: 'charlie.b@example.com' },
 ];
 
 const Home = () => {
