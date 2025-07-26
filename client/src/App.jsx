@@ -22,24 +22,21 @@ import "react-toastify/dist/ReactToastify.css";
  * A simple layout wrapper for the SignUp page to ensure it has the correct styling
  * (i.e., it doesn't have the main content padding).
  */
-const SignUpPageLayout = () => 
-    (
+const SignUpPageLayout = () => (
   <div className="relative pt-0">
     <SignUp />
   </div>
 );
 const LoginPageLayout = () => (
-    <div className="relative pt-0">
-        <Login />
-    </div>
-)
+  <div className="relative pt-0">
+    <Login />
+  </div>
+);
 
 function App() {
   return (
-    // The AuthProvider wraps the entire application, making the authentication
-    // state (isAuthenticated, login, logout) available to all components inside it.
+    // The AuthProvider wraps the entire app and provides auth state + loading
     <AuthProvider>
-      {/* BrowserRouter is aliased as Router and handles the routing logic. */}
       <Router>
         <div className="bg-[#F6F8FA] min-h-screen font-sans">
           <Navbar />
@@ -55,20 +52,13 @@ function App() {
             pauseOnHover
           />
 
-          {/* This <main> tag holds the content for each page. */}
-          {/* The top padding (pt-24) prevents content from being hidden by the fixed Navbar. */}
           <main className="pt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Routes>
-              {/* --- PUBLIC ROUTE --- */}
-              {/* The user can always access this page. */}
+              {/* PUBLIC ROUTES */}
               <Route path="/signup" element={<SignUpPageLayout />} />
-              <Route path="/login" element={<LoginPageLayout />} />{
+              <Route path="/login" element={<LoginPageLayout />} />
 
-              }
-
-              {/* --- PROTECTED ROUTES --- */}
-              {/* The user must be authenticated to access these pages. */}
-              {/* If not authenticated, the <ProtectedRoute> will redirect them to "/signup". */}
+              {/* PROTECTED ROUTES */}
               <Route
                 path="/"
                 element={
@@ -94,8 +84,7 @@ function App() {
                 }
               />
 
-              {/* --- CATCH-ALL REDIRECT --- */}
-              {/* If a user tries to access any other path, they will be redirected to the homepage. */}
+              {/* CATCH ALL - redirect to home */}
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </main>
