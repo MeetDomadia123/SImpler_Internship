@@ -1,12 +1,29 @@
-# React + Vite
+# Slate UI - React & Tailwind CSS Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-Currently, two official plugins are available:
+A modern and responsive frontend application built for the **Simpler Internship Task**. This project features a complete user authentication system (Login/Sign Up), protected routes, and a collection of sleek UI components styled with Tailwind CSS.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## How to Run This Project Locally
+
+To get this project running on your own machine, follow these simple steps.
+
+### 1. Clone the Repository
+
+First, clone the project from GitHub to your local computer.
+
+```bash
+git clone https://github.com/MeetDomadia123/SImpler_Internship
+
+cd client
+
+npm install
+
+npm run dev
+
+
+The application will now be running and available to view at http://localhost:5173.
